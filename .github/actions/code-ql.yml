@@ -1,5 +1,5 @@
 name: 'CodeQL'
-description: 'CodeQL Repo'
+description: 'Reusable CodeQL'
 # inputs:
 #   who-to-greet:  # id of input
 #     description: 'Who to greet'
