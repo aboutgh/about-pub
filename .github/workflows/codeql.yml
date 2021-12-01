@@ -21,4 +21,4 @@ jobs:
       with:
         fetch-depth: 2
 
-    - uses: ./.github/actions/codeql
+    - uses: aboutgh/about-pub/.github/actions/codeql@main
