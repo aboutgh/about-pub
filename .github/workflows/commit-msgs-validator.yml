@@ -14,4 +14,4 @@ on:
 
 jobs:
   check-commit-message:
-    uses: aboutgh/about-pub/.github/workflows/reused-commit-msgs-validator.yml@devel
+    uses: aboutgh/about-pub/.github/workflows/reused-check-messages.yml@main
