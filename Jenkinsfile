@@ -4,7 +4,12 @@ pipeline {
 		disableConcurrentBuilds abortPrevious: true
 	}
 
-    agent any
+	agent {
+		docker {
+			image 'docker.dev.dbeaver.infra/jenkins-builder'
+			reuseNode true
+		}
+	}
 
 	stages {
 		stage("Clean up after build") {
