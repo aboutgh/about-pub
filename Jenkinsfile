@@ -13,7 +13,7 @@ pipeline {
 	stages {
 		stage("Clean up after build") {
 			steps {
-				sh "echo 1"
+				sh "echo main"
 			}
 		}
 	}
