@@ -16,7 +16,7 @@ pipeline {
 			steps {
 				script {
                     PR_author = sh (
-                        script: "gh pr view ${env.CHANGE_ID} --json author --jq '.author.login' https://github.com/aboutgh/about-pub",
+                        script: "gh pr view ${env.CHANGE_ID} --json author --jq '.author.login' -R https://github.com/aboutgh/about-pub",
                         returnStdout: true
                     ).trim()					
 					echo PR_author
