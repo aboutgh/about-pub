@@ -1,17 +1,17 @@
-name: "Commit Message Validation"
+# name: "Commit Message Validation"
 
-on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - opened
-      - synchronize
-      - reopened
-      - edited
-      - ready_for_review
-      - labeled
+# on:
+#   pull_request:
+#     branches:
+#       - main
+#     types:
+#       - opened
+#       - synchronize
+#       - reopened
+#       - edited
+#       - ready_for_review
+#       - labeled
 
-jobs:
-  check-commit-message:
-    uses: aboutgh/about-pub/.github/workflows/reused-commit-msgs-validator.yml@devel
+# jobs:
+#   check-commit-message:
+#     uses: aboutgh/about-pub/.github/workflows/reused-commit-msgs-validator.yml@devel
