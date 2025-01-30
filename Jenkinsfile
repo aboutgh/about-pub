@@ -4,16 +4,18 @@ pipeline {
 		disableConcurrentBuilds abortPrevious: true
 	}
 
-    environment {
-    	GITHUB_TOKEN = credentials('devops_gh_token_secret_text')
-    }
-
     agent any
 
 	stages {
 		stage("Clean up after build") {
 			steps {
-				sh "echo dbeaver-file"
+				script {
+                    PR_author = sh (
+                        script: "gh pr view ${env.CHANGE_ID} --json author --jq '.author.login' https://github.com/aboutgh/about-pub",
+                        returnStdout: true
+                    ).trim()					
+					echo PR_author
+				}
 			}
 		}
 	}
